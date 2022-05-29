@@ -5,6 +5,7 @@
 **/
 package BiweeklyContest79;
 
+//这一题没有完全做出来，最开始一个版本有两个用例无法通过，当前的版本有的问题，后面再修改了
 public class BookMyShow {
     /**
      * 思路：一共有n排座位，每一排有m个座位。
