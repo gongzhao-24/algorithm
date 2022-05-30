@@ -8,46 +8,43 @@ package weeklyContest295;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-import com.apple.concurrent.Dispatch.Priority;
+import javax.lang.model.element.Element;
 
 public class MinimumObstacles {
+    int[][] forwards = new int[][] {
+            { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 }
+    };
+
     public int minimumObstacles(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-        int[][] dpDown = new int[grid.length][grid[0].length];
-        int[][] dpUp = new int[grid.length][grid[0].length];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i == 0 && j == 0) {
-                    continue;
+        int line = grid.length;
+        int row = grid[0].length;
+        int[][] dis = new int[line][row];
+        for (int[] distances : dis) {
+            Arrays.fill(distances, Integer.MAX_VALUE);
+        }
+        dis[0][0] = 0;
+        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>((o1, o2) -> {
+            return dis[o1[0]][o1[1]] - dis[o2[0]][o2[1]];
+        });
+        priorityQueue.offer(new int[] { 0, 0 });
+        while (!priorityQueue.isEmpty()) {
+            int[] poll = priorityQueue.poll();
+            for (int[] forward : forwards) {
+                int xf = poll[0] + forward[0];
+                int yf = poll[1] + forward[1];
+                if (xf >= 0 && xf < line && yf >= 0 && yf < row) {
+                    int distance = grid[xf][yf] + dis[poll[0]][poll[1]];
+                    if (dis[xf][yf] <= distance) {
+                        continue;
+                    } else {
+                        dis[xf][yf] = distance;
+                        priorityQueue.offer(new int[] { xf, yf });
+                    }
                 }
-                if (i == 0) {
-                    dpDown[i][j] = dpDown[i][j - 1] + grid[i][j];
-                } else if (j == 0) {
-                    dpDown[i][j] = dpDown[i - 1][j] + grid[i][j];
-                } else {
-                    dpDown[i][j] = Math.min(dpDown[i][j - 1], dpDown[i - 1][j]) + grid[i][j];
-                }
+
             }
         }
-
-        for (int i = m - 1; i >= 0; i--) {
-            for (int j = n - 1; j >= 0; j--) {
-                if (i == m - 1 && j == n - 1) {
-                    continue;
-                }
-                if (i == m - 1) {
-                    dpDown[i][j] = dpDown[i][j + 1] + grid[i][j];
-                } else if (j == 0) {
-                    dpDown[i][j] = dpDown[i + 1][j] + grid[i][j];
-                } else {
-                    dpDown[i][j] = Math.min(dpDown[i][j + 1], dpDown[i -+1][j]) + grid[i][j];
-                }
-            }
-        }
-
-        
-
+        return dis[line - 1][row - 1];
     }
 
     public static void main(String[] args) {
