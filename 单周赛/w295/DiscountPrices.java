@@ -3,7 +3,7 @@
 * 创建日期：2022年05月29 10:35:
 * @author gong zhao 
 **/
-package weeklyContest295;
+package 单周赛.w295;
 
 import java.math.BigDecimal;
 

@@ -3,7 +3,7 @@
 * 创建日期：2022年05月28 22:38:
 * @author gong zhao 
 **/
-package BiweeklyContest79;
+package 双周赛.w79;
 
 import java.util.ArrayList;
 import java.util.HashMap;

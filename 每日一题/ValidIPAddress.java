@@ -3,7 +3,7 @@
 * 创建日期：2022年05月29 00:12:
 * @author gong zhao 
 **/
-package daily;
+package 每日一题;
 
 public class ValidIPAddress {
     //copy 的，有空再研究吧，这题不难，就是很麻烦

@@ -3,7 +3,7 @@
 * 创建日期：2022年05月28 22:49:
 * @author gong zhao 
 **/
-package BiweeklyContest79;
+package 双周赛.w79;
 
 //这一题没有完全做出来，最开始一个版本有两个用例无法通过，当前的版本有的问题，后面再修改了
 public class BookMyShow {
