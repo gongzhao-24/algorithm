@@ -71,7 +71,6 @@ public class Floyd {
                 }
             }
         }
-
         Map<Integer, List<Integer>> map = new HashMap<>();
         int minCount = Integer.MAX_VALUE;
         for (int i = 0; i < n; i++) {
@@ -91,7 +90,5 @@ public class Floyd {
             map.get(count).add(i);
         }
         return map.get(minCount).stream().max(Integer::compareTo).get();
-
     }
-
 }
