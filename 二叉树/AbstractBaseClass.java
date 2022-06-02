@@ -5,7 +5,7 @@
  * 
  * @author gong zhao
  **/
-package 链表;
+package 二叉树;
 
 import java.util.List;
 
