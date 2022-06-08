@@ -5,6 +5,10 @@
 **/
 package 并查集;
 
+/**
+ * 并查集 主要解决图论中的连通性问题
+ */
+
 public class UnionFind {
     
 }
