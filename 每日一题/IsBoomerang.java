@@ -64,10 +64,6 @@ public class IsBoomerang {
     }
 
     public static void main(String[] args) {
-        int[][] points = new int[][] {
-                { 2, 2 }, { 8, 8 }, { 3, 3 }
-        };
-        IsBoomerang isBoomerang = new IsBoomerang();
-        System.out.println(isBoomerang.isBoomerang(points));
+       
     }
 }
