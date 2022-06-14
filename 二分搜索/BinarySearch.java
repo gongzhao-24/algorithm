@@ -76,6 +76,10 @@ public class BinarySearch {
         return -1;
     }
 
+    //todo 左边界二分搜索,即找到单调队列中小于target最大的数，如果没有，返回-1
+
+    //todo 右边界二分搜索,即找到单调队列中大于target最小的数，如果没有，返回-1
+
     public static void main(String[] args) {
         int[] normalNums = new int[]{1, 2, 3, 4, 5};
         int[] nums = new int[]{1, 2, 3, 3, 3, 4, 5};
