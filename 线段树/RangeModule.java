@@ -26,8 +26,9 @@ public class RangeModule {
     public void update(Node node, int treeLeft, int treeRight, int left, int right, boolean contain) {
         if (left <= treeLeft && right >= treeRight) {
             node.contain = contain;
-            node.flag = contain;
-          //  System.out.println( "treeLeft：" + treeLeft + ", treeRight:" + treeRight + ", contain:" + node.contain + ", flag:" + node.flag);
+            node.flag = contain ? 1 : -1;
+            // System.out.println( "treeLeft：" + treeLeft + ", treeRight:" + treeRight + ",
+            // contain:" + node.contain + ", flag:" + node.flag);
             return;
         }
         pushDown(node);
@@ -41,7 +42,8 @@ public class RangeModule {
             update(node.right, mid + 1, treeRight, mid + 1, right, contain);
         }
         pushUp(node);
-       // System.out.println("treeLeft：" + treeLeft + ", treeRight:" + treeRight + ", contain:" + node.contain + ", flag:" + node.flag);
+        // System.out.println("treeLeft：" + treeLeft + ", treeRight:" + treeRight + ",
+        // contain:" + node.contain + ", flag:" + node.flag);
     }
 
     public void pushUp(Node node) {
@@ -59,13 +61,13 @@ public class RangeModule {
         if (node.right == null) {
             node.right = new Node();
         }
-        if (node.flag) {
-            node.left.contain = node.flag;
+        if (node.flag != 0) {
+            node.left.contain = node.contain;
             node.left.flag = node.flag;
-            node.right.contain = node.flag;
+            node.right.contain = node.contain;
             node.right.flag = node.flag;
         }
-        node.flag = false;
+        node.flag = 0;
     }
 
     public boolean queryRange(int left, int right) {
@@ -97,8 +99,8 @@ public class RangeModule {
         Node right;
         // 左右端点都包含则为true
         boolean contain;
-        // 懒加载标志，true：有懒加载，false：没有懒加载
-        boolean flag;
+        // 懒加载标志， 0 ：无懒标记，1：add懒加载，-1：remove懒加载
+        int flag;
     }
 
     public static void main(String[] args) {
