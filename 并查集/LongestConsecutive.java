@@ -67,8 +67,6 @@ public class LongestConsecutive {
             count--;
         }
 
-        // 连接
-
         // 找到父节点
         public int findParent(int x) {
             if (x != parent[x]) {
