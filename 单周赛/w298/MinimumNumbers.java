@@ -45,6 +45,7 @@ public class MinimumNumbers {
             char numChar = String.valueOf(num).charAt(String.valueOf(num).length() - 1);
             if (temp <= num && tempChar == numChar) {
                 res = i;
+                break;
             }
         }
         return res == 0 ? -1 : res;

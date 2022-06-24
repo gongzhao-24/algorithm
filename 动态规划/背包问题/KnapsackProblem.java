@@ -154,7 +154,7 @@ public class KnapsackProblem {
          * 分析：
          * ①：同样在0-1背包一维转移方程的基础上分析，0-1背包一维方程中，容量j是倒序的，
          * 其根本目的在于避免 正序过程中，第 i 个物品更新 的 dp[较小体积] 污染了 第 i-1行的 dp[较小体积]的数据
-         * 从而，而在完全背包中，在相同的物品，如果取第二个的时候，正好需要从第一个转移而来，所以需要正序
+         * ，而在完全背包中，在相同的物品，如果取第二个的时候，正好需要从第一个转移而来，所以需要正序
          * 
          */
         int length = weights.length;
@@ -168,7 +168,7 @@ public class KnapsackProblem {
     }
 
     /**
-     * 多重背包问题1：
+     * 多重背包问题1：二维数组
      * 有 N 种物品和一个容量是 V 的背包，
      * 第 i 种物品最多有 amount[i] 件，每件物品的容量是 weights[i]，价值是 values[i]。
      * 
@@ -177,8 +177,46 @@ public class KnapsackProblem {
      */
     public int multipleKnapsackProblem1(int[] weights, int[] values, int[] amount, int V) {
         /**
-         * 
+         * ①：多重背包问题相比于完全背包，多了一个附加条件，即：每种物品的个数是有限的，因此可以在三重遍历的基础上做
          */
+        int len = weights.length;
+        int[][] dp = new int[len + 1][V + 1];
+        // dp[0][0]表示初始情况
+        for (int i = 1; i <= len; i++) {
+            for (int j = 1; j <= V; j++) {
+                dp[i][j] = dp[i - 1][j];
+                for (int k = 0; k * weights[i - 1] <= j && k <= amount[i - 1]; k++) {
+                    dp[i][j] = Math.max(dp[i][j], dp[i - 1][j - k * weights[i - 1]] + k * values[i - 1]);
+                }
+            }
+        }
+        return dp[len][V];
+    }
+
+    /**
+     * 多重背包问题1：一维数组优化
+     * 有 N 种物品和一个容量是 V 的背包，
+     * 第 i 种物品最多有 amount[i] 件，每件物品的容量是 weights[i]，价值是 values[i]。
+     * 
+     * 求解将哪些物品装入背包，可使物品体积总和不超过背包容量，且价值总和最大。
+     * 输出最大价值。
+     */
+    public int multipleKnapsackProblem2(int[] weights, int[] values, int[] amount, int V) {
+        /**
+         * ①：多重背包问题相比于完全背包，多了一个附加条件，即：每种物品的个数是有限的，因此可以在三重遍历的基础上做
+         * ②：同上面的一维数组优化一致，只保留 容量维度
+         */
+        int len = weights.length;
+        int[] dp = new int[V + 1];
+        // dp[0][0]表示初始情况
+        for (int i = 1; i <= len; i++) {
+            for (int j = 1; j <= V; j++) {
+                for (int k = 0; k * weights[i - 1] <= j && k <= amount[i - 1]; k++) {
+                    dp[j] = Math.max(dp[j], dp[j - k * weights[i - 1]] + k * values[i - 1]);
+                }
+            }
+        }
+        return dp[V];
     }
 
     /**
@@ -189,7 +227,7 @@ public class KnapsackProblem {
      * 求解将哪些物品装入背包，可使物品体积总和不超过背包容量，且价值总和最大。
      * 输出最大价值。
      */
-    public int multipleKnapsackProblem2(int[] weights, int[] values, int[] amount, int V) {
+    public int multipleKnapsackProblem3(int[] weights, int[] values, int[] amount, int V) {
         /**
          * 
          */
@@ -203,7 +241,7 @@ public class KnapsackProblem {
      * 求解将哪些物品装入背包，可使物品体积总和不超过背包容量，且价值总和最大。
      * 输出最大价值。
      */
-    public int multipleKnapsackProblem2(int[] weights, int[] values, int[] amount, int V) {
+    public int multipleKnapsackProblem4(int[] weights, int[] values, int[] amount, int V) {
         /**
          * 
          */
@@ -231,6 +269,7 @@ public class KnapsackProblem {
     public static void main(String[] args) {
         int[] weights = new int[] { 1, 2, 3, 4 };
         int[] values = new int[] { 2, 4, 4, 5 };
+        int[] amount = new int[] { 3, 1, 3, 2 };
         int V = 5;
 
         KnapsackProblem knapsackProblem = new KnapsackProblem();
@@ -239,5 +278,7 @@ public class KnapsackProblem {
         System.out.println(knapsackProblem.completeKnapsackProblem1(weights, values, V));
         System.out.println(knapsackProblem.completeKnapsackProblem2(weights, values, V));
         System.out.println(knapsackProblem.completeKnapsackProblem3(weights, values, V));
+        System.out.println(knapsackProblem.multipleKnapsackProblem1(weights, values, amount, V));
+        System.out.println(knapsackProblem.multipleKnapsackProblem2(weights, values, amount, V));
     }
 }
