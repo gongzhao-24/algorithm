@@ -9,6 +9,9 @@ public class Lis {
     public int lengthOfLIS(int[] nums) {
         /**
          * 贪心：
+         * ①：d[i]表示长度为i的上升子序列中，最小的末尾数字.
+         * ②：d[i]是单调递增的，可以这么理解，假如说 d[2] = 5 大于 d[3] = 4;那么很容易理解，d[3]表示长度为3的上升子序列的末尾是4，
+         *     那么很明显在这个子序列中，处于第二个的数字明显小于4，那么数字一定是小于5的，所以这里是矛盾的。
          */
         int len = nums.length;
         int[] d = new int[len + 1];
