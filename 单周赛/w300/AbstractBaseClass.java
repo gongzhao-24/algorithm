@@ -5,7 +5,7 @@
  * 
  * @author gong zhao
  **/
-package 链表;
+package 单周赛.w300;
 
 import java.util.List;
 

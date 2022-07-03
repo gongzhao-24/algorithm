@@ -3,11 +3,9 @@
 * 创建日期：2022年07月03 10:46:
 * @author gong zhao 
 **/
-package 链表;
+package 单周赛.w300;
 
 import java.util.Arrays;
-
-import javax.swing.text.html.HTMLDocument.HTMLReader.HiddenAction;
 
 public class SpiralMatrix extends AbstractBaseClass {
     public int[][] spiralMatrix(int m, int n, ListNode head) {

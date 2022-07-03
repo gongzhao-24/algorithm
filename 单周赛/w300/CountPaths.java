@@ -7,8 +7,6 @@ package 单周赛.w300;
 
 import java.util.Arrays;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
 public class CountPaths {
     int[][] forwords = new int[][] {
             { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 }
