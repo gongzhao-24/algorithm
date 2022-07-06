@@ -14,7 +14,6 @@ public class UnionFind {
     private int count;
     // 连通关系
     private int[] parent;
-    /* 将 p 和 q 连接 */
 
     public UnionFind(int n) {
         this.count = n;
