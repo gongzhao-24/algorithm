@@ -47,6 +47,6 @@ public class LargestDivisibleSubset {
         int[] nums = new int[] { 1, 2, 4, 8 };
         LargestDivisibleSubset largestDivisibleSubset = new LargestDivisibleSubset();
         List<Integer> res = largestDivisibleSubset.largestDivisibleSubset(nums);
-        System.out.println();
+        System.out.println(res);
     }
 }

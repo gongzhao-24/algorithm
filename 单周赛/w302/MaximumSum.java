@@ -5,9 +5,7 @@
 **/
 package 单周赛.w302;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.stream.IntStream;
 
 public class MaximumSum {
@@ -31,7 +29,6 @@ public class MaximumSum {
         int maxSum = -1;
         int i = 0;
         int j = 1;
-        List<Integer> list = new ArrayList();
         while (i < len && j < len) {
             if (sumArray[ids[i]] == sumArray[ids[j]]) {
                 maxSum = Math.max(nums[ids[i]] + nums[ids[j]], maxSum);

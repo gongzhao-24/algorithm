@@ -73,7 +73,7 @@ public class MaximalRectangle {
             int[] up = new int[line];
             // down[i] 表示 比第i行的1少的最近的下面的行数是多少
             int[] down = new int[line];
-            Stack<Integer> stack = new Stack();
+            Stack<Integer> stack = new Stack<>();
             for (int i = 0; i < line; i++) {
                 while (!stack.isEmpty() && left[stack.peek()][j] >= left[i][j]) {
                     stack.pop();

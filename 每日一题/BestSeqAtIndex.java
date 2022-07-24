@@ -6,7 +6,6 @@
 package 每日一题;
 
 import java.util.Arrays;
-import java.util.PriorityQueue;
 
 public class BestSeqAtIndex {
     public int bestSeqAtIndex(int[] height, int[] weight) {
@@ -25,8 +24,8 @@ public class BestSeqAtIndex {
         });
 
         for (int i = 1; i < height.length; i++) {
-            if(players[i][0] > players[i])
+           // if(players[i][0] > players[i])
         }
-
+        return 0;
     }
 }

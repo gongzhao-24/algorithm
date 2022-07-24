@@ -5,7 +5,6 @@
 **/
 package 并查集;
 
-import java.util.UUID;
 
 public class RegionsBySlashes {
     public int regionsBySlashes(String[] grid) {

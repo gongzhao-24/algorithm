@@ -16,7 +16,6 @@ public class DecodeMessage {
         Set<Character> set = new HashSet<>();
         int index = -1;
         for (int i = 0; i < key.length(); i++) {
-            char c = key.charAt(i);
             if (set.contains(key.charAt(i))) {
                 continue;
             } else if (key.charAt(i) != ' ') {

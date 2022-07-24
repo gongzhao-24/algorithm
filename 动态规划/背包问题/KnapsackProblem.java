@@ -231,6 +231,7 @@ public class KnapsackProblem {
         /**
          * 
          */
+        return 0;
     }
 
     /**
@@ -245,6 +246,7 @@ public class KnapsackProblem {
         /**
          * 
          */
+        return 0;
     }
 
     /**
@@ -264,6 +266,7 @@ public class KnapsackProblem {
         /**
          * 
          */
+        return 0;
     }
 
     public static void main(String[] args) {

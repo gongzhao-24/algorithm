@@ -7,6 +7,6 @@ package 动态规划.数位统计DP;
 
 public class CountNumbersWithUniqueDigits {
     public int countNumbersWithUniqueDigits(int n) {
-
+        return 0;
     }
 }

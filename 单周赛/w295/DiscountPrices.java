@@ -5,7 +5,6 @@
 **/
 package 单周赛.w295;
 
-import java.math.BigDecimal;
 
 public class DiscountPrices {
     public String discountPrices(String sentence, int discount) {

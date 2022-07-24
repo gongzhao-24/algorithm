@@ -5,7 +5,6 @@
 **/
 package 单周赛.w297;
 
-import java.util.PriorityQueue;
 
 public class MinPathCost {
     public static int minPathCost(int[][] grid, int[][] moveCost) {

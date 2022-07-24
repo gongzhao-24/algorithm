@@ -11,7 +11,7 @@ import java.util.Map;
 public class LongestConsecutive {
     public int longestConsecutive(int[] nums) {
         UnionFind unionFind = new UnionFind(nums.length);
-        Map<Integer, Integer> map = new HashMap();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(nums[i])) {
                 continue;

@@ -5,7 +5,6 @@
 **/
 package 单周赛.w301;
 
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class FillCups {

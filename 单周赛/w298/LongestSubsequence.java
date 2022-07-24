@@ -5,8 +5,6 @@
 **/
 package 单周赛.w298;
 
-import javax.security.auth.kerberos.ServicePermission;
-import javax.sound.sampled.SourceDataLine;
 
 public class LongestSubsequence {
     // 最长子序列，而且得出来的值小于或等于k

@@ -8,5 +8,6 @@ package 单周赛.w301;
 public class IdealArrays {
     public int idealArrays(int n, int maxValue) {
         //
+        return 0;
     }
 }

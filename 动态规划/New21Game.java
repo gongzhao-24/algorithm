@@ -10,5 +10,6 @@ public class New21Game {
         /**
          * 
          */
+        return 1d;
     }
 }

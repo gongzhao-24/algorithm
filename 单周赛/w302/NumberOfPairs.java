@@ -5,7 +5,6 @@
 **/
 package 单周赛.w302;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -25,8 +24,6 @@ public class NumberOfPairs {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[] { 0, 0, 1, 2 };
-        int[] ans = numberOfPairs(nums);
         System.out.println();
     }
 }

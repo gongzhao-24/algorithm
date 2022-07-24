@@ -15,8 +15,8 @@ import java.util.Set;
 
 public class FindWinners {
     public List<List<Integer>> findWinners(int[][] matches) {
-        Map<Integer, Integer> loseGame = new HashMap();
-        Set<Integer> participate = new HashSet();
+        Map<Integer, Integer> loseGame = new HashMap<>();
+        Set<Integer> participate = new HashSet<>();
         for (int[] matche : matches) {
             loseGame.put(matche[1], loseGame.getOrDefault(matche[1], 0) + 1);
             participate.add(matche[0]);

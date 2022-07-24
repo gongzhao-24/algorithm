@@ -11,10 +11,10 @@ public class Encrypter {
     }
 
     public String encrypt(String word1) {
-
+        return "";
     }
 
     public int decrypt(String word2) {
-
+        return 0;
     }
 }

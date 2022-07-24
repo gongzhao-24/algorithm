@@ -5,7 +5,6 @@
 **/
 package 单周赛.w297;
 
-import java.math.BigDecimal;
 
 public class CalculateTax {
     public static double calculateTax(int[][] brackets, int income) {

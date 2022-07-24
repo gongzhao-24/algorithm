@@ -5,24 +5,23 @@
 **/
 package 序列;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
-https://leetcode.cn/problems/longest-consecutive-sequence/solution/by-lfool-jdy4/ 仔细研究
+//https://leetcode.cn/problems/longest-consecutive-sequence/solution/by-lfool-jdy4/ 仔细研究
 public class LongestConsecutive {
     public int longestConsecutive(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+      //  Map<Integer, Integer> map = new HashMap<>();
         Set<Integer> set = new HashSet<>();
         int minNum = Integer.MAX_VALUE;
-        int maxLen = 0;
+      //  int maxLen = 0;
         for (int num : nums) {
             set.add(num);
             minNum = Math.min(num, minNum);
         }
-        for (int num : nums) {
+      /*   for (int num : nums) {
 
-        }
+        } */
+        return 0;
     }
 }

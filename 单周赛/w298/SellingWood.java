@@ -7,6 +7,6 @@ package 单周赛.w298;
 
 public class SellingWood {
     public long sellingWood(int m, int n, int[][] prices) {
-
+        return 1l;
     }
 }

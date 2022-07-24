@@ -6,10 +6,7 @@
 package 单周赛.w295;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Deque;
-import java.util.List;
-import java.util.Stack;
 
 public class TotalSteps {
     // 每次移除 nums[i-1] > nums[i] 的 nums[i]，直到nums 变为非递减数组

@@ -7,7 +7,6 @@ package 单周赛.w302;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -15,7 +14,6 @@ public class SmallestTrimmedNumbers {
     public int[] smallestTrimmedNumbers(String[] nums, int[][] queries) {
         int len = queries.length;
         int[] ans = new int[len];
-        int n = nums[0].length();
         for (int i = 0; i < len; i++) {
             int[] query = queries[i];
             int k = query[0];

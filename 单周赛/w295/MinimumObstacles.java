@@ -8,7 +8,6 @@ package 单周赛.w295;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-import javax.lang.model.element.Element;
 
 public class MinimumObstacles {
     int[][] forwards = new int[][] {

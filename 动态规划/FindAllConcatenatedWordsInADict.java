@@ -9,6 +9,6 @@ import java.util.List;
 
 public class FindAllConcatenatedWordsInADict {
     public List<String> findAllConcatenatedWordsInADict(String[] words) {
-
+        return null;
     }
 }

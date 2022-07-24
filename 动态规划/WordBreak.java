@@ -46,7 +46,7 @@ public class WordBreak {
         if (index == len) {
             if (set.contains(current)) {
                 deque.addLast(current);
-                res.add(new ArrayList(deque));
+                res.add(new ArrayList<>(deque));
                 deque.removeLast();
             }
         } else {

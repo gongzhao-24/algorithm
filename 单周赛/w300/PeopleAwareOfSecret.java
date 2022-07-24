@@ -28,6 +28,5 @@ public class PeopleAwareOfSecret {
     }
 
     public static void main(String[] args) {
-        System.out.println(mod);
     }
 }

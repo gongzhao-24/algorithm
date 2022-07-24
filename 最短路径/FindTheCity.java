@@ -98,6 +98,6 @@ public class FindTheCity {
 
         FindTheCity findTheCity = new FindTheCity();
         int n = findTheCity.findTheCity(6, edges, 417);
-        System.out.println();
+        System.out.println(n);
     }
 }
