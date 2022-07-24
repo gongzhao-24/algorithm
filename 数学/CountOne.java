@@ -10,14 +10,31 @@ public class CountOne {
         return Integer.bitCount(num);
     }
 
+    public static int countZero(int num) {
+        if (num == 0) {
+            return 1;
+        }
+        int moveNum = 1;
+        int ans = 0;
+        while (moveNum < num) {
+            if ((moveNum & num) == 0) {
+                ans++;
+            }
+            moveNum = (moveNum << 1);
+        }
+
+        return ans;
+    }
+
     public static void main(String[] args) {
-        System.out.println(countOne(1));
-        System.out.println(countOne(2));
-        System.out.println(countOne(3));
-        System.out.println(countOne(4));
-        System.out.println(countOne(5));
-        System.out.println(countOne(6));
-        System.out.println(countOne(7));
-        System.out.println(countOne(8));
+        System.out.println(countZero(0));
+        System.out.println(countZero(1));
+        System.out.println(countZero(2));
+        System.out.println(countZero(3));
+        System.out.println(countZero(4));
+        System.out.println(countZero(5));
+        System.out.println(countZero(6));
+        System.out.println(countZero(7));
+        System.out.println(countZero(8));
     }
 }
