@@ -5,6 +5,9 @@
 **/
 package 动态规划.数位统计DP;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 import javax.sound.sampled.SourceDataLine;
 
 public class DigitalDP {
@@ -68,6 +71,7 @@ public class DigitalDP {
     }
 
     public static void main(String[] args) {
+        Queue<Integer> queue = new ArrayDeque<>();
         System.out.println(notDownNumber(19));
     }
 }
