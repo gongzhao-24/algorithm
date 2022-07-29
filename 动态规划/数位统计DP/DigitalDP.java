@@ -53,11 +53,13 @@ public class DigitalDP {
         // 表示上一位的数字
         int last = 0;
         // 从高位到低位枚举
-        for (int i = len - 1; i >= 1; i--) {
+        for (int i = 0; i < len; i++) {
             // 当前位数
             int cur = array[i];
+            // 不降数是指，当前的数要至少比上一位的数要大
             for (int j = last; j < cur; j++) {
-                res += dp[i][j];
+                // i 表示一共有i位，如果i = len - 1 的话，那就是1 为
+                res += dp[len - i][j];
             }
             if (cur < last) {
                 break;
@@ -71,7 +73,6 @@ public class DigitalDP {
     }
 
     public static void main(String[] args) {
-        Queue<Integer> queue = new ArrayDeque<>();
-        System.out.println(notDownNumber(19));
+        System.out.println(notDownNumber(9) - notDownNumber(0));
     }
 }
