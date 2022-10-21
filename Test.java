@@ -6,13 +6,8 @@ import java.util.function.Function;
 * @author gong zhao 
 **/
 public class Test {
-    public void test(){
-        Function<Integer, String> triangle = arg -> arg*3 + "";
-        System.out.println(triangle.apply(3));
-    }
-
     public static void main(String[] args) {
-        Test test = new Test();
-        test.test();
+        
+       
     }
 }
