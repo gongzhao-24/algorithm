@@ -7,6 +7,8 @@ package 动态规划;
 
 import java.util.Arrays;
 
+import 每日一题.HeightChecker;
+
 public class DistinctSubseqII {
     public int distinctSubseqII(String s) {
         /**
